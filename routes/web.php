@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\Product\ProductController;
 use Illuminate\Routing\Router;
 use App\Http\Controllers\CommentController;
 
@@ -47,7 +46,6 @@ Route::get('/articles/detail/{id}', [
     'detail'
 ]);
 
-Route::get('/products', [ProductController::class, 'index']);
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
